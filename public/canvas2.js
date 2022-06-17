@@ -2,6 +2,20 @@
 const canvas = document.getElementById('canvas1');
 const ctx = canvas.getContext('2d'); //canvas api 
 
+//background colour changer
+let colours = ['white', 'green','blue','red','purple','orange','black','pink'] //colour array
+
+let buttonBackground = document.getElementById('buttonBackground')
+
+buttonBackground.addEventListener('click',function(){
+var changeColour = colours[Math.floor(Math.random()* colours.length)]
+let canvas =document.getElementById('canvas1')
+
+canvas.style.background = changeColour
+
+}) 
+
+
 canvas.width = window.innerWidth
 canvas.height = window.innerHeight   //resize window
 ctx. globalCompositeOperation = 'destination-over'
@@ -30,6 +44,8 @@ number++
 hue +=0.5
 }
 
+
+
 function animate(){
     //draw frame
    
@@ -40,3 +56,14 @@ requestAnimationFrame(animate)
 }
 
 animate()
+
+
+
+var x = document.getElementById("MySound") //id = MySound
+
+function playAudio(){
+    x.play()  //play button
+}
+function pauseAudio(){
+    x.pause() //stop button 
+}

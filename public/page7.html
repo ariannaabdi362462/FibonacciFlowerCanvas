@@ -9,6 +9,17 @@
 <body>
   <div class="header">
     <h1>Fibaonacci Flowers</h1> 
+    <p>Play the music to see how it matches with the animation sequence and don't forget to share!</p>
+    <audio id="MySound">
+      <source src= "sounds/sound7.mp3">
+    </audio> <!--audio source-->
+
+      <!--Play audio on click button-->
+  <button onclick="playAudio()" type="button">Play Music
+  </button>
+  <button onclick="pauseAudio()" type="button">Pause Music
+  </button> 
+
    <button>
      <a href ="page6.html">Previous</a>
    </button>
@@ -18,14 +29,24 @@
     <button>
       <a href="page8.html">Next</a>
       </button>
+      <button><!--download image when loaded-->
+      <a id="download" download="myImage.jpg" href="" onclick="download_img(this)">Download to myimage.jpg</a>
+      </button>
+      <button id="buttonBackground" class="button">Click me to change background colour</button>
     </div>
     
-  <canvas id= "canvas1" width="700" height="700" >
-    
-  </canvas>
+  <canvas id= "canvas1" width="700" height="700" ></canvas>
 
-
+ 
   
+  <script>
+    //share image
+  
+  download_img = function(el){
+    var imageURI = canvas1.toDataURL("image/jpg") //saves image that returns data URI
+    el.href = imageURI;
+  }
+  </script>
   <script src="canvas7.js"></script>
  
 </body>

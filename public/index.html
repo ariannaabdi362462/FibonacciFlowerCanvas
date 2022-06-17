@@ -5,29 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Canvas</title>
   <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
   <div class="header">
   <h1>Fibaonacci Flowers</h1> 
-  <p>A Generative Art Piece using the Fibonacci number sequence... Explore this page to find out all the different variations and colours. Use the next and back button to explore this animated art. Enjoy!</p>
+  <p>A Generative Art Piece using the Fibonacci number sequence... Use the next and back button to explore this animated art. Play the music to see how it matches with the animation sequence and don't forget to share!</p>
   
-  <button>
+  <audio id="MySound">
+    <source src= "sounds/canvas1_sound.mp3">
+  </audio> <!--audio source-->
+
+  <!--Play audio on click button-->
+  <button onclick="playAudio()" type="button" class="button">Play Music
+  </button>
+  <button onclick="pauseAudio()" type="button" class="button">Pause Music
+  </button> 
+  
+<button class="button">
     <a href="page2.html">next page</a>
     </button>
-    <button>
+    <button class="button">
       <a href ="index.html">Reset</a>
     </button>
-<div class="fb-share-button" data-href="https://subtle-macaron-4f9d56.netlify.app/" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
-</div>
-<!--Facebook share button linked to index page.-->
+
+
+
+<!-- <div class="fb-share-button" data-href="https://subtle-macaron-4f9d56.netlify.app/" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+</div> Facebook share button linked to index page. -->
+
+<!--download canvas-->
+<button onclick="shareCanvas()" class="button">shareCanvas</button> <!--share png -->
 
   <canvas id= "canvas1" ></canvas>  <!--Create Canvas appears on screen-->
   
-  <div id="fb-root"></div>
+  <button><!--download image when loaded-->
+  <a id="download" class="button" download="myImage.jpg" href="" onclick="download_img(this)">Download to myimage.jpg</a>
+  </button>
+ 
+  <!-- <div id="fb-root"></div>
   <script async defer crossorigin="anonymous" 
-  src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v14.0" nonce="7AvPoIIZ"></script>
+  src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v14.0" nonce="7AvPoIIZ"></script> -->
+  <button id="buttonBackground" class="">Click me to change background colour</button>
   
-  <script src="canvas.js"></script>  <!--Link to js file for this canvas-->
+<script>
+  //share animated canvas
+
+  //download image
+download_img = function(el){
+  var imageURI = canvas1.toDataURL("image/jpg") //saves image that returns data URI
+  el.href = imageURI;
+
+
+//share animated canvas
+async function shareCanvas(){
+    const canvasElement = document.getElementById('canvas1')
+    const dataUrl = canvasElement.toDataUrl()
+    const blob = await(await fetch (dataUrl)).blob()
+}
+const shareData = {files : filesArray}
+
+if(navigator.share){
+navigator.share(shareData)
+}else{
+navigator.share('Unable to share')
+} // come back to this
+
+}
+
+
+</script>
+  
+<script src="canvas.js"></script>  <!--Link to js file for this canvas-->
  
 </body>
 </html>

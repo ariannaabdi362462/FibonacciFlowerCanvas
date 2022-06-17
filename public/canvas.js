@@ -2,10 +2,25 @@
 const canvas = document.getElementById('canvas1');
 const ctx = canvas.getContext('2d'); // 2D drawing using canvas api 
 
+
+//background colour changer
+let colours = ['white', 'green','blue','red','purple','orange','black','pink'] //colour array
+
+let buttonBackground = document.getElementById('buttonBackground') //declared in html
+
+buttonBackground.addEventListener('click',function(){ //event listener 
+var changeColour = colours[Math.floor(Math.random()* colours.length)] //change colours in random order 
+let canvas =document.getElementById('canvas1')
+
+canvas.style.background = changeColour  //change background
+
+}) //https://www.youtube.com/watch?v=jznWWxPZkvQ
+
+
 canvas.width = window.innerWidth
 canvas.height = window.innerHeight //resize window
 ctx. globalCompositeOperation = 'destination-over'
-hue = Math.random() * 360 //create rainbow 
+hue = Math.random() * 360 //create rainbow  
 
 let number = 0 //set varible 
 let scale = 10
@@ -50,3 +65,19 @@ const setUpCanvas = () => {
     c.width = c.clientWidth;
     c.height = c.clientHeight;
 }
+
+//*Fibonacci flower code = https://www.youtube.com/watch?v=ymmtEgp0Tuc   
+
+
+
+//audio
+var x = document.getElementById("MySound") //id = MySound
+
+function playAudio(){
+    x.play()  //play button
+}
+function pauseAudio(){
+    x.pause() //stop button 
+}
+
+
