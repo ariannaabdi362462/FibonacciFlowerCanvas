@@ -53,6 +53,18 @@ requestAnimationFrame(animate)
 
 animate()
 
+window.addEventListener('keydown',this.doKeyDown,false); 
+
+function doKeyDown(e) {
+   // W Key
+    if ( e.keyCode == 87 ) {
+        drawFlower() //draw flower by pressing key
+        hue += 0.5
+        
+     
+    }
+} 
+
 var x = document.getElementById("MySound") //id = MySound
 
 function playAudio(){

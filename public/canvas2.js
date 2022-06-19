@@ -57,6 +57,20 @@ requestAnimationFrame(animate)
 
 animate()
 
+window.addEventListener('keydown',this.doKeyDown,false); 
+
+function doKeyDown(e) {
+   // W Key
+    if ( e.keyCode == 87 ) {
+       //change shape
+       drawFlower()
+    // ctx.fillStyle='hsl(400,20%,70%)'
+    // ctx.fill()
+    number++
+    hue+=10
+ 
+    }
+}
 
 
 var x = document.getElementById("MySound") //id = MySound

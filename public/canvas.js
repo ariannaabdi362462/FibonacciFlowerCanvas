@@ -69,6 +69,18 @@ const setUpCanvas = () => {
 //*Fibonacci flower code = https://www.youtube.com/watch?v=ymmtEgp0Tuc   
 
 
+window.addEventListener('keydown',this.doKeyDown,false);
+
+function doKeyDown(e) {
+   // W Key
+    if ( e.keyCode == 87 ) {
+       //change speed of drawing  
+        drawFlower()
+if(number > 1000)return //size of frame 
+requestAnimationFrame(animate)
+
+    }
+}
 
 //audio
 var x = document.getElementById("MySound") //id = MySound

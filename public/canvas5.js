@@ -54,6 +54,21 @@ requestAnimationFrame(animate)
 }
 
 animate()
+window.addEventListener('keydown',this.doKeyDown,false); 
+
+function doKeyDown(e) {
+   // W Key
+    if ( e.keyCode == 87 ) {
+        drawFlower() //draw flower by pressing key
+        if(number > 600)return //speed
+        requestAnimationFrame(animate)
+
+        number++
+        hue +=10  //speed
+
+    }
+} 
+
 
 var x = document.getElementById("MySound") //id = MySound
 
