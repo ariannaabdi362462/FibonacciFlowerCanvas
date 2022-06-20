@@ -24,6 +24,11 @@ hue = 0
 let number = 0
 let scale = 10
 
+window.addEventListener('keydown',this.doKeyDown,false); 
+
+function doKeyDown(e){
+    //w key to draw 
+    if ( e.keyCode == 87 ) {
 function drawFlower(){
 
     let angle = number * 8
@@ -43,7 +48,26 @@ ctx.stroke()
 number++
 hue +=0.5
 }
-
+    }
+    //C key to change colour
+    if (e.keyCode == 67){
+        let angle = number * 8
+        let radius = scale * Math.sqrt(number)
+        let positionX = radius * Math.sin(angle) + canvas.width/2
+        let positionY = radius * Math.cos(angle) + canvas.height/2
+    
+    ctx.fillStyle ='blue'
+    ctx.strokeStyle=  'red'
+    ctx.lineWidth = 8
+    ctx.beginPath()
+    ctx.arc(positionX, positionY, 55, 0, Math.PI * 2) //full circle
+    ctx.closePath()
+    ctx.fill()
+    ctx.stroke()
+    
+    number++
+    hue +=0.5
+    }
 function animate(){
     //draw frame
    
@@ -54,21 +78,10 @@ requestAnimationFrame(animate)
 }
 
 animate()
-window.addEventListener('keydown',this.doKeyDown,false); 
+}
 
-function doKeyDown(e) {
-   // W Key
-    if ( e.keyCode == 87 ) {
-        drawFlower() //draw flower by pressing key
-        if(number > 600)return //speed
-        requestAnimationFrame(animate)
 
-        number++
-        hue +=10  //speed
-
-    }
-} 
-
+    
 
 var x = document.getElementById("MySound") //id = MySound
 
