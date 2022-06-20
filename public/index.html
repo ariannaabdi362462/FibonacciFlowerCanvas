@@ -31,21 +31,17 @@
 
 
 
-<!-- <div class="fb-share-button" data-href="https://subtle-macaron-4f9d56.netlify.app/" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
-</div> Facebook share button linked to index page. -->
-
 <!--download canvas-->
-<button onclick="shareCanvas()" class="button">shareCanvas</button> <!--share png -->
+<!-- <button onclick="shareCanvas()" type="button">share canvas</button> -->
 
   <canvas id= "canvas1" ></canvas>  <!--Create Canvas appears on screen-->
   
   <button><!--download image when loaded-->
+  
   <a id="download" class="button" download="myImage.jpg" href="" onclick="download_img(this)">Download to myimage.jpg</a>
   </button>
  
-  <!-- <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous" 
-  src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v14.0" nonce="7AvPoIIZ"></script> -->
+ 
   <button id="buttonBackground" class="">Click me to change background colour</button>
   
 <script>
@@ -58,19 +54,17 @@ download_img = function(el){
 
 
 //share animated canvas
-async function shareCanvas(){
-    const canvasElement = document.getElementById('canvas1')
-    const dataUrl = canvasElement.toDataUrl()
-    const blob = await(await fetch (dataUrl)).blob()
-}
-const shareData = {files : filesArray}
-
-if(navigator.share){
-navigator.share(shareData)
-}else{
-navigator.share('Unable to share')
-} // come back to this
-
+// async function shareCanvas(){
+//     const canvasElement = document.getElementById('canvas1')
+//     const dataUrl = canvasElement.toDataUrl()
+//     const blob = await(await fetch (dataUrl)).blob()
+// }
+// const shareData = {files : filesArray}
+// if (navigator.canShare && navigator.canShare(shareData)) {
+ 
+// } else {
+//     console.log('Device does not support this')
+// }
 }
 
 

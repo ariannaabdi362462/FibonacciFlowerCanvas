@@ -31,10 +31,10 @@ function doKeyDown(e){
 
 function drawFlower(){
 
-    let angle = number * 2
-    let radius = scale * Math.sqrt(number)
-    let positionX = radius * Math.sin(angle) + canvas.width/2
-    let positionY = radius * Math.cos(angle) + canvas.height/2
+let angle = number * 2
+let radius = scale * Math.sqrt(number)
+let positionX = radius * Math.sin(angle) + canvas.width/2
+let positionY = radius * Math.cos(angle) + canvas.height/2
 
 ctx.fillStyle ='green'
 ctx.strokeStyle=  'yellow'
@@ -52,10 +52,10 @@ hue +=0.5
 // c key for colour change.
 if (e.keyCode == 67 ){
 
-    let angle = number * 2
-    let radius = scale * Math.sqrt(number)
-    let positionX = radius * Math.sin(angle) + canvas.width/2
-    let positionY = radius * Math.cos(angle) + canvas.height/2
+let angle = number * 2
+let radius = scale * Math.sqrt(number)
+let positionX = radius * Math.sin(angle) + canvas.width/2
+let positionY = radius * Math.cos(angle) + canvas.height/2
 
 ctx.fillStyle ='white'
 ctx.strokeStyle=  'pink'

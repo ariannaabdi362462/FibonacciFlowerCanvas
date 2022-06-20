@@ -32,10 +32,10 @@ function doKeyDown(e){
 function drawFlower(){
 
 
-    let angle = number * 99
-    let radius = scale * Math.sqrt(number)
-    let positionX = radius * Math.sin(angle) + canvas.width/2
-    let positionY = radius * Math.cos(angle) + canvas.height/2
+let angle = number * 99
+let radius = scale * Math.sqrt(number)
+let positionX = radius * Math.sin(angle) + canvas.width/2
+let positionY = radius * Math.cos(angle) + canvas.height/2
 
 ctx.fillStyle ='#89CFF0'
 ctx.strokeStyle=  'green'
@@ -53,10 +53,10 @@ hue +=0.5
 //c key
 if (e.keyCode == 67){
   
-    let angle = number * 99
-    let radius = scale * Math.sqrt(number)
-    let positionX = radius * Math.sin(angle) + canvas.width/2
-    let positionY = radius * Math.cos(angle) + canvas.height/2
+let angle = number * 99
+let radius = scale * Math.sqrt(number)
+let positionX = radius * Math.sin(angle) + canvas.width/2
+let positionY = radius * Math.cos(angle) + canvas.height/2
 
 ctx.fillStyle ='purple' //change colour of flower if c is pressed
 ctx.strokeStyle=  'blue'

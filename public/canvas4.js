@@ -33,10 +33,10 @@ function doKeyDown(e) {
 
 function drawFlower(){
 
-    let angle = number * 8
-    let radius = scale * Math.sqrt(number)
-    let positionX = radius * Math.sin(angle) + canvas.width/2
-    let positionY = radius * Math.cos(angle) + canvas.height/2
+let angle = number * 8
+let radius = scale * Math.sqrt(number)
+let positionX = radius * Math.sin(angle) + canvas.width/2
+let positionY = radius * Math.cos(angle) + canvas.height/2
 
 ctx.fillStyle ='magenta'
 ctx.strokeStyle=  'crimson'

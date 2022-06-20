@@ -27,11 +27,10 @@ let scale = 10
 
 function drawFlower(){
 
-    
-    let angle = number * 3.8  // equal to let  number
-    let radius = scale * Math.sqrt(number) //square route 
-    let positionX = radius * Math.sin(angle) + canvas.width/2   //set postion of flower x axis
-    let positionY = radius * Math.cos(angle) + canvas.height/2 //set postion of flower Y axis
+let angle = number * 3.8  // equal to let  number
+let radius = scale * Math.sqrt(number) //square route 
+let positionX = radius * Math.sin(angle) + canvas.width/2   //set postion of flower x axis
+let positionY = radius * Math.cos(angle) + canvas.height/2 //set postion of flower Y axis
 
     
 

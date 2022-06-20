@@ -53,10 +53,10 @@ hue +=0.5
     //C key for colour changes 
 if(e.keyCode==67){
 //draw flower again
-    let angle = number * 6
-    let radius = scale * Math.sqrt(number)
-    let positionX = radius * Math.sin(angle) + canvas.width/2
-    let positionY = radius * Math.cos(angle) + canvas.height/2
+let angle = number * 6
+let radius = scale * Math.sqrt(number)
+let positionX = radius * Math.sin(angle) + canvas.width/2
+let positionY = radius * Math.cos(angle) + canvas.height/2
 
 ctx.fillStyle ='#4573de'
 ctx.strokeStyle=  '#ab45de'

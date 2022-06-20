@@ -31,10 +31,10 @@ function doKeyDown(e) {
 
 function drawFlower(){
 
-    let angle = number * 6
-    let radius = scale * Math.sqrt(number)
-    let positionX = radius * Math.sin(angle) + canvas.width/2
-    let positionY = radius * Math.cos(angle) + canvas.height/2
+let angle = number * 6
+let radius = scale * Math.sqrt(number)
+let positionX = radius * Math.sin(angle) + canvas.width/2
+let positionY = radius * Math.cos(angle) + canvas.height/2
 
 ctx.fillStyle ='#DF91FC'
 ctx.strokeStyle=  '#FDFDFE'
@@ -52,19 +52,19 @@ hue +=0.5
     
     //c key 
     if (e.keyCode==67){
-        let angle = number * 10
-        let radius = scale * Math.sqrt(number)
-        let positionX = radius * Math.sin(angle) + canvas.width/2
-        let positionY = radius * Math.cos(angle) + canvas.height/2
+let angle = number * 10
+let radius = scale * Math.sqrt(number)
+let positionX = radius * Math.sin(angle) + canvas.width/2
+let positionY = radius * Math.cos(angle) + canvas.height/2
     
-    ctx.fillStyle ='#DF91FC'
-    ctx.strokeStyle=  '#FDFDFE'
-    ctx.lineWidth = 6
-    ctx.beginPath()
-    ctx.arc(positionX, positionY, 25, 0, Math.PI * 2) //full circle
-    ctx.closePath()
-    ctx.fill()
-    ctx.stroke()
+ctx.fillStyle ='#DF91FC'
+ctx.strokeStyle=  '#FDFDFE'
+ctx.lineWidth = 6
+ctx.beginPath()
+ctx.arc(positionX, positionY, 25, 0, Math.PI * 2) //full circle
+ctx.closePath()
+ctx.fill()
+ctx.stroke()
     
     number++
     hue +=0.5
